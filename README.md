@@ -1,4 +1,4 @@
-![Project Head]
+![Project Head](https://github.com/mayank1ahuja/da_walmart_project/blob/aeab5d930236083532ba9ae8064193d22bc9de12/header.png)
 # 🛍️ Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight 🛍️
 
 ---
