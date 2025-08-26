@@ -106,7 +106,7 @@ This step formalizes the dataset, allowing SQL queries to be executed against a 
 With the dataset loaded into PostgreSQL, the analysis pivots to structured problem solving. Each SQL query addresses a specific business scenario, demonstrating the ability to articulate questions in business terms and translate them into precise SQL logic.
 
 1. Payment Methods and Quantity Sold 
-This query enumerates payment methods, transaction counts, and quantities sold. It reveals how customers choose to pay and what volume flows through each channel.
+- This query enumerates payment methods, transaction counts, and quantities sold. It reveals how customers choose to pay and what volume flows through each channel.
 ```sql
 SELECT 
 	 payment_method,
@@ -117,7 +117,7 @@ GROUP BY payment_method;
 ```
 
 2. Highest-Rated Categories per Branch 
-Here, window functions are employed to rank categories within each branch by average rating, surfacing the top-rated category in each location.
+- Here, window functions are employed to rank categories within each branch by average rating, surfacing the top-rated category in each location.
 ```sql
 SELECT * FROM 
 (	
@@ -133,7 +133,7 @@ WHERE rank = 1;
 ```
 
 3. Busiest Day per Branch 
-By counting transactions per day of the week and ranking them within each branch, this query identifies the busiest operational day branch-wise.
+- By counting transactions per day of the week and ranking them within each branch, this query identifies the busiest operational day branch-wise.
 ```sql
 SELECT * FROM
 (
@@ -149,7 +149,7 @@ WHERE rank = 1;
 
 ```
 4. Quantity Sold by Payment Method 
-This complements Q1 by calculating total quantities sold across payment methods, reinforcing insights into purchasing channels.
+- This complements question 1 by calculating total quantities sold across payment methods, reinforcing insights into purchasing channels.
 ```sql
 SELECT 
 	 payment_method,
@@ -160,7 +160,7 @@ GROUP BY payment_method;
 
 ```
 5. Category Ratings per City 
-Average, minimum, and maximum ratings are calculated for each category across cities. This provides granular insight into geographic differences in customer perception.
+- Average, minimum, and maximum ratings are calculated for each category across cities. This provides granular insight into geographic differences in customer perception.
 ```sql
 SELECT 
 	city,
@@ -172,7 +172,7 @@ FROM walmart
 GROUP BY 1, 2;
 ```
 6. Profitability by Category �
-By computing revenue and profit (unit_price × quantity × profit_margin), this query highlights the most lucrative product categories.
+- By computing revenue and profit (unit_price × quantity × profit_margin), this query highlights the most lucrative product categories.
 ```sql
 
 SELECT 
@@ -184,7 +184,7 @@ GROUP BY 1
 ORDER BY 3 DESC;
 ```
 7. Preferred Payment Method per Branch �
-A CTE combined with ranking identifies the most frequently used payment method in each branch.
+- A CTE combined with ranking identifies the most frequently used payment method in each branch.
 ```sql
 WITH cte AS
 (
@@ -201,7 +201,7 @@ FROM cte
 WHERE rank = 1;
 ```
 8. Sales Distribution by Time of Day 
-Transactions are categorized into Morning, Afternoon, and Evening shifts to reveal temporal patterns in purchasing behavior.
+- Transactions are categorized into Morning, Afternoon, and Evening shifts to reveal temporal patterns in purchasing behavior.
 ```sql
 SELECT
 	branch,
