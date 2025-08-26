@@ -1,5 +1,5 @@
 ![Project Head](https://github.com/mayank1ahuja/da_walmart_project/blob/aeab5d930236083532ba9ae8064193d22bc9de12/header.png)
-<h1 align="center">🛍️✨Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight✨🛍️ </h1>
+<h2 align="center">🛍️✨Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight✨🛍️ </h2>
 
 
 ## 📑 Project Overview
@@ -10,9 +10,9 @@ The goal is twofold:
 1. To demonstrate practical fluency in both Python and SQL for analytics.
 2. To provide a portfolio artifact that communicates correctness, reasoning, and professional polish.
 
-![Project Pipeline](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/project%20pipeline.png)
-
 What distinguishes this project is not only the sequence of operations but also the deliberate explanation of intent at each stage. Every step — from removing duplicates to constructing window functions — is motivated by a clear analytical need. This transforms the repository from a collection of scripts into a structured demonstration of competence.
+
+![Project Pipeline](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/project%20pipeline.png)
 
 
 ## 📚 Project Steps
@@ -30,11 +30,12 @@ To keep data access reproducible the project relies on the Kaggle API. Generate 
 ```bash
 kaggle datasets download -d <dataset-path>
 ```
-![Dataset](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20dataset.png)
 
 ### 3. Downloading the Walmart Dataset
 The analysis centers on Walmart sales data hosted on Kaggle:
 *Dataset*: https://www.kaggle.com/najir0123/walmart-10k-sales-datasets
+
+![Dataset](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20dataset.png)
 
 The dataset was retrieved directly from Kaggle and placed into a dedicated data/ directory within the repository. Housing raw inputs under data/ gives the workflow a single, stable anchor point and preserves a clean, discoverable project structure.
 
