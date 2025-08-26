@@ -236,7 +236,7 @@ Together, these insights illustrate how transactional data can be transformed in
 
 Install dependencies:
 ```bash
-pip install pandas numpy sqlalchemy psycopg2
+pip install pandas sqlalchemy psycopg2
 ```
 
 
