@@ -10,7 +10,7 @@ The goal is twofold:
 1. To demonstrate practical fluency in both Python and SQL for analytics.
 2. To provide a portfolio artifact that communicates correctness, reasoning, and professional polish.
 
-What distinguishes this project is not only the sequence of operations but also the deliberate explanation of intent at each stage. Every step — from removing duplicates to constructing window functions — is motivated by a clear analytical need. This transforms the repository from a collection of scripts into a structured demonstration of competence.
+What distinguishes this project is not only the sequence of operations but also the deliberate explanation of intent at each stage. Every step, right from removing duplicates to constructing window functions is motivated by a clear analytical need. This transforms the repository from a collection of scripts into a structured demonstration of competence.
 
 ![Project Pipeline](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/project%20pipeline.png)
 
