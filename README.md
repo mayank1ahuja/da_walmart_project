@@ -1,11 +1,10 @@
 ![Project Head](https://github.com/mayank1ahuja/da_walmart_project/blob/aeab5d930236083532ba9ae8064193d22bc9de12/header.png)
 # 🛍️ Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight 🛍️
 
----
 
 ## Project Overview
 
-![Walmart Logo]
+![Walmart Logo](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20logo.jpg)
 
 This repository presents an end-to-end SQL + Python data analysis pipeline applied to Walmart sales data. The workflow begins with data cleaning and exploration in Python, transitions into SQL-driven business problem solving, and culminates in a set of actionable insights about retail performance.
 
@@ -13,11 +12,10 @@ The goal is twofold:
 1. To demonstrate practical fluency in both Python and SQL for analytics.
 2. To provide a portfolio artifact that communicates correctness, reasoning, and professional polish.
 
-![Project Pipeline]
+![Project Pipeline](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/project%20pipeline.png)
 
 What distinguishes this project is not only the sequence of operations but also the deliberate explanation of intent at each stage. Every step — from removing duplicates to constructing window functions — is motivated by a clear analytical need. This transforms the repository from a collection of scripts into a structured demonstration of competence.
 
----
 
 ## Project Steps
 
@@ -34,6 +32,7 @@ To keep data access reproducible the project relies on the Kaggle API. Generate 
 ```bash
 kaggle datasets download -d <dataset-path>
 ```
+![Dataset](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20dataset.png)
 
 ### 3. Downloading the Walmart Dataset
 The analysis centers on Walmart sales data hosted on Kaggle:
@@ -101,7 +100,6 @@ df.to_sql("walmart", engine, if_exists="replace", index=False)
 ```
 This step formalizes the dataset, allowing SQL queries to be executed against a standardized table. It marks the transition from data preparation to business problem solving.
 
----
 
 ## Data Analysis & Business Problems 🧮
 With the dataset loaded into PostgreSQL, the analysis pivots to structured problem solving. Each SQL query addresses a specific business scenario, demonstrating the ability to articulate questions in business terms and translate them into precise SQL logic.
@@ -217,7 +215,6 @@ GROUP BY 1, 2
 ORDER BY 1, 3 DESC;
 ```
 
----
 
 ## Results and Insights ✨
 
@@ -230,7 +227,6 @@ The combined analysis offers a multi-dimensional perspective on Walmart sales:
  
 Together, these insights illustrate how transactional data can be transformed into actionable business intelligence.
 
----
 
 ## Requirements
 - Python 3.8+
@@ -242,7 +238,6 @@ Install dependencies:
 pip install pandas numpy sqlalchemy psycopg2
 ```
 
----
 
 ## Project Structure
 
@@ -253,7 +248,6 @@ pip install pandas numpy sqlalchemy psycopg2
 |-- README.md              # Documentation
 ```
 
----
 
 ## Results and Insights
 
@@ -262,7 +256,6 @@ pip install pandas numpy sqlalchemy psycopg2
 - **Payment behavior**: Branches differ in preferred payment methods — actionable for regional strategy.
 - **Customer trends**: Ratings, transaction times, and quantities reveal behavioral nuances.
 
----
 
 ## Future Enhancements
 
@@ -271,9 +264,8 @@ Possible extensions to this project:
 - Additional data sources to enhance analysis depth.
 - Automation of the data pipeline for real-time data ingestion and analysis.
 
----
 
 ## Acknowledgments
 
-- **Data Source**: Kaggle’s Walmart Sales Dataset
+- **Data Source**: Kaggle’s Walmart Sales Dataset(*Link*: https://www.kaggle.com/datasets/najir0123/walmart-10k-sales-datasets).
 - **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
