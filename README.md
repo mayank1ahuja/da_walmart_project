@@ -270,4 +270,5 @@ Possible extensions to this project:
 
 - **Data Source**: Kaggle’s Walmart Sales Dataset.
 - **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
+  
 ![Walmart Logo](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20logo.jpg)
