@@ -33,7 +33,7 @@ kaggle datasets download -d <dataset-path>
 
 ### 3. Downloading the Walmart Dataset
 The analysis centers on Walmart sales data hosted on Kaggle:
-*Dataset*: https://www.kaggle.com/najir0123/walmart-10k-sales-datasets
+- *Dataset*: https://www.kaggle.com/najir0123/walmart-10k-sales-datasets
 
 ![Dataset](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20dataset.png)
 
