@@ -1,10 +1,8 @@
 ![Project Head](https://github.com/mayank1ahuja/da_walmart_project/blob/aeab5d930236083532ba9ae8064193d22bc9de12/header.png)
-# 🛍️ Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight 🛍️
+## Retail Analytics with SQL & Python — A Walmart Case Study in Data-Driven Insight 
 
 
-## Project Overview
-
-![Walmart Logo](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20logo.jpg)
+## 📑 Project Overview
 
 This repository presents an end-to-end SQL + Python data analysis pipeline applied to Walmart sales data. The workflow begins with data cleaning and exploration in Python, transitions into SQL-driven business problem solving, and culminates in a set of actionable insights about retail performance.
 
@@ -17,7 +15,7 @@ The goal is twofold:
 What distinguishes this project is not only the sequence of operations but also the deliberate explanation of intent at each stage. Every step — from removing duplicates to constructing window functions — is motivated by a clear analytical need. This transforms the repository from a collection of scripts into a structured demonstration of competence.
 
 
-## Project Steps
+## 📚 Project Steps
 
 ### 1. Environment Setup   
 The analysis is conducted within a Jupyter Notebook environment, supported by Python 3.8+ and PostgreSQL as the relational database. Key libraries include:
@@ -28,7 +26,7 @@ The analysis is conducted within a Jupyter Notebook environment, supported by Py
 This stack ensures that exploratory work can proceed flexibly in Python, while more complex aggregations and business problems are expressed through SQL in a performant database context.
 
 ### 2. Kaggle API Setup
-To keep data access reproducible the project relies on the Kaggle API. Generate an API token from your Kaggle [Kaggle](https://www.kaggle.com/) account settings and place the resulting kaggle.json in your local .kaggle/ directory. With credentials configured, datasets can be fetched directly into the project with a single command:
+To keep data access reproducible the project relies on the Kaggle API. Generate an API token from your [Kaggle](https://www.kaggle.com/) account settings and place the resulting kaggle.json in your local .kaggle/ directory. With credentials configured, datasets can be fetched directly into the project with a single command:
 ```bash
 kaggle datasets download -d <dataset-path>
 ```
@@ -61,12 +59,14 @@ A preliminary look at the first rows (**df.head()**) reinforces this verificatio
 ```python
 df.head()
 ```
+![df.head](https://github.com/mayank1ahuja/da_walmart_project/blob/0d20916b91209e1c5bc2ca0ddb66b16a04b5f6c9/df.head().png)
 
 ### 6. Descriptive Profiling
 The command **df.describe()** generates descriptive statistics of numerical features. This stage is less about immediate decision-making and more about building intuition: which values dominate, where the extremes lie, and whether anomalies exist that warrant intervention.
 ```python
 df.describe()
 ```
+![df.describe](https://github.com/mayank1ahuja/da_walmart_project/blob/0d20916b91209e1c5bc2ca0ddb66b16a04b5f6c9/df.describe().png)
 Profiling at this stage establishes a baseline understanding of the dataset’s statistical distribution, allowing subsequent cleaning and SQL queries to be interpreted with greater confidence.
 
 ### 7. Duplicate Handling
@@ -101,10 +101,10 @@ df.to_sql("walmart", engine, if_exists="replace", index=False)
 This step formalizes the dataset, allowing SQL queries to be executed against a standardized table. It marks the transition from data preparation to business problem solving.
 
 
-## Data Analysis & Business Problems 🧮
+## 🧮 Data Analysis & Business Problems 
 With the dataset loaded into PostgreSQL, the analysis pivots to structured problem solving. Each SQL query addresses a specific business scenario, demonstrating the ability to articulate questions in business terms and translate them into precise SQL logic.
 
-1. Payment Methods and Quantity Sold 💳
+1. Payment Methods and Quantity Sold 
 This query enumerates payment methods, transaction counts, and quantities sold. It reveals how customers choose to pay and what volume flows through each channel.
 ```sql
 SELECT 
@@ -115,7 +115,7 @@ FROM walmart
 GROUP BY payment_method;
 ```
 
-2. Highest-Rated Categories per Branch ⭐
+2. Highest-Rated Categories per Branch 
 Here, window functions are employed to rank categories within each branch by average rating, surfacing the top-rated category in each location.
 ```sql
 SELECT * FROM 
@@ -131,7 +131,7 @@ SELECT
 WHERE rank = 1;
 ```
 
-3. Busiest Day per Branch 📅
+3. Busiest Day per Branch 
 By counting transactions per day of the week and ranking them within each branch, this query identifies the busiest operational day branch-wise.
 ```sql
 SELECT * FROM
@@ -147,7 +147,7 @@ SELECT * FROM
 WHERE rank = 1;
 
 ```
-4. Quantity Sold by Payment Method 🛒
+4. Quantity Sold by Payment Method 
 This complements Q1 by calculating total quantities sold across payment methods, reinforcing insights into purchasing channels.
 ```sql
 SELECT 
@@ -158,7 +158,7 @@ FROM walmart
 GROUP BY payment_method;
 
 ```
-5. Category Ratings per City 🌆
+5. Category Ratings per City 
 Average, minimum, and maximum ratings are calculated for each category across cities. This provides granular insight into geographic differences in customer perception.
 ```sql
 SELECT 
@@ -170,7 +170,7 @@ SELECT
 FROM walmart
 GROUP BY 1, 2;
 ```
-6. Profitability by Category 💰
+6. Profitability by Category �
 By computing revenue and profit (unit_price × quantity × profit_margin), this query highlights the most lucrative product categories.
 ```sql
 
@@ -182,7 +182,7 @@ FROM walmart
 GROUP BY 1
 ORDER BY 3 DESC;
 ```
-7. Preferred Payment Method per Branch 🏬
+7. Preferred Payment Method per Branch �
 A CTE combined with ranking identifies the most frequently used payment method in each branch.
 ```sql
 WITH cte AS
@@ -199,7 +199,7 @@ SELECT *
 FROM cte
 WHERE rank = 1;
 ```
-8. Sales Distribution by Time of Day ⏰
+8. Sales Distribution by Time of Day 
 Transactions are categorized into Morning, Afternoon, and Evening shifts to reveal temporal patterns in purchasing behavior.
 ```sql
 SELECT
@@ -216,7 +216,7 @@ ORDER BY 1, 3 DESC;
 ```
 
 
-## Results and Insights ✨
+## ✨ Results and Insights 
 
 The combined analysis offers a multi-dimensional perspective on Walmart sales:
 - **Payment Preferences**: Distinct variation across branches, informing branch-level strategy.
@@ -228,7 +228,7 @@ The combined analysis offers a multi-dimensional perspective on Walmart sales:
 Together, these insights illustrate how transactional data can be transformed into actionable business intelligence.
 
 
-## Requirements
+## 🛠️ Requirements
 - Python 3.8+
 - PostgreSQL
 - Python libraries: pandas, sqlalchemy, psycopg2
@@ -239,7 +239,7 @@ pip install pandas numpy sqlalchemy psycopg2
 ```
 
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```plaintext
 |-- data/                  # Dataset 
@@ -249,7 +249,7 @@ pip install pandas numpy sqlalchemy psycopg2
 ```
 
 
-## Results and Insights
+## 📊 Results and Insights
 
 - **Branch dynamics**: Certain branches show clear peak days; others have steady patterns. 
 - **Category performance**: Some categories consistently dominate profit margins; others trail despite volume.
@@ -257,7 +257,7 @@ pip install pandas numpy sqlalchemy psycopg2
 - **Customer trends**: Ratings, transaction times, and quantities reveal behavioral nuances.
 
 
-## Future Enhancements
+## 🚀 Future Enhancements
 
 Possible extensions to this project:
 - Integration with a dashboard tool (e.g., Power BI or Tableau) for interactive visualization.
@@ -265,7 +265,8 @@ Possible extensions to this project:
 - Automation of the data pipeline for real-time data ingestion and analysis.
 
 
-## Acknowledgments
+## 📄 Acknowledgments
 
-- **Data Source**: Kaggle’s Walmart Sales Dataset(*Link*: https://www.kaggle.com/datasets/najir0123/walmart-10k-sales-datasets).
+- **Data Source**: Kaggle’s Walmart Sales Dataset.
 - **Inspiration**: Walmart’s business case studies on sales and supply chain optimization.
+![Walmart Logo](https://github.com/mayank1ahuja/da_walmart_project/blob/7c2b93c1078fe0e0257aa2a8fb476da40a73ea09/walmart%20logo.jpg)
