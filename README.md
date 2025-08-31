@@ -251,15 +251,6 @@ pip install pandas sqlalchemy psycopg2
 |-- README.md              # Documentation
 ```
 
-
-## 📊 Results and Insights
-
-- **Branch dynamics**: Certain branches show clear peak days; others have steady patterns. 
-- **Category performance**: Some categories consistently dominate profit margins; others trail despite volume.
-- **Payment behavior**: Branches differ in preferred payment methods — actionable for regional strategy.
-- **Customer trends**: Ratings, transaction times, and quantities reveal behavioral nuances.
-
-
 ## 🚀 Future Enhancements
 
 Possible extensions to this project:
