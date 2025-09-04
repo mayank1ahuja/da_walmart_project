@@ -173,7 +173,7 @@ SELECT
 FROM walmart
 GROUP BY 1, 2;
 ```
-6. Profitability by Category �
+6. Profitability by Category 
 - By computing revenue and profit (unit_price × quantity × profit_margin), this query highlights the most lucrative product categories.
 ```sql
 
@@ -185,7 +185,7 @@ FROM walmart
 GROUP BY 1
 ORDER BY 3 DESC;
 ```
-7. Preferred Payment Method per Branch �
+7. Preferred Payment Method per Branch 
 - A CTE combined with ranking identifies the most frequently used payment method in each branch.
 ```sql
 WITH cte AS
